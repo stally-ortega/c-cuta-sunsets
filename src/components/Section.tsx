@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
-const brandEase = [0.22, 1, 0.36, 1] as const;
+const brandEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 interface SectionProps {
   children: ReactNode;
@@ -15,7 +15,7 @@ const Section = ({ children, id, className = '' }: SectionProps) => (
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10%" }}
-      transition={{ duration: 0.8, ease: brandEase as unknown as number[] }}
+      transition={{ duration: 0.8, ease: brandEase }}
     >
       {children}
     </motion.div>

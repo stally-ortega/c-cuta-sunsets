@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion';
 import heroCucuta from '@/assets/hero-cucuta.jpg';
 
-const brandEase = [0.22, 1, 0.36, 1];
+const brandEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-end overflow-hidden">
-      {/* Background image with parallax feel */}
       <motion.div
         className="absolute inset-0 z-0"
         initial={{ scale: 1.1 }}
@@ -21,7 +20,6 @@ const HeroSection = () => {
         <div className="absolute inset-0" style={{ background: 'var(--gradient-warm-overlay)' }} />
       </motion.div>
 
-      {/* Content */}
       <div className="relative z-10 px-6 md:px-12 pb-[12vh] w-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

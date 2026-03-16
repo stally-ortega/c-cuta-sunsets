@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import wideAvenues from '@/assets/wide-avenues.jpg';
 import { MapPin, Users } from 'lucide-react';
 
-const brandEase = [0.22, 1, 0.36, 1];
+const brandEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const UrbanSection = () => {
   return (
@@ -17,7 +17,6 @@ const UrbanSection = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 mt-12">
-          {/* Image */}
           <motion.div
             className="relative rounded-bento overflow-hidden shadow-bento order-2 md:order-1"
             initial={{ opacity: 0, clipPath: 'inset(0 100% 0 0)' }}
@@ -32,7 +31,6 @@ const UrbanSection = () => {
             />
           </motion.div>
 
-          {/* Text */}
           <div className="order-1 md:order-2">
             <div className="space-y-6 text-muted-foreground leading-relaxed max-w-[65ch]">
               <p>

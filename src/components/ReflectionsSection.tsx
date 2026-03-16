@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Theater, Thermometer, Calendar } from 'lucide-react';
 
-const brandEase = [0.22, 1, 0.36, 1];
+const brandEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const stats = [
   { icon: Thermometer, value: '45°C', label: 'Peak Heat' },
@@ -33,7 +33,6 @@ const ReflectionsSection = () => {
           Cúcuta gave more than heat and wide avenues. It gave perspective. The SENA stage became a crucible where raw potential met discipline. The friendships forged under 45°C don't fade — they are tempered by fire. Every bead of sweat on that stage was a lesson in resilience, and every applause was proof that growth happens outside the comfort zone.
         </p>
 
-        {/* Stats */}
         <div className="flex justify-center gap-12 md:gap-20 mt-16">
           {stats.map((stat, i) => (
             <motion.div
@@ -53,7 +52,6 @@ const ReflectionsSection = () => {
           ))}
         </div>
 
-        {/* Footer */}
         <div className="mt-24 pt-8 border-t border-background/10">
           <p className="text-xs text-background/30 font-display uppercase tracking-widest">
             Studio Calima — Cúcuta, Norte de Santander, Colombia

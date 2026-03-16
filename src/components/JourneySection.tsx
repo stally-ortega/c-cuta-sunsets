@@ -2,7 +2,7 @@ import Section from './Section';
 import { motion } from 'framer-motion';
 import theaterStage from '@/assets/theater-stage.jpg';
 
-const brandEase = [0.22, 1, 0.36, 1];
+const brandEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const JourneySection = () => {
   return (
@@ -34,7 +34,6 @@ const JourneySection = () => {
           </div>
         </div>
 
-        {/* Theater image */}
         <motion.div
           className="relative rounded-bento overflow-hidden shadow-bento"
           initial={{ opacity: 0, clipPath: 'inset(100% 0 0 0)' }}

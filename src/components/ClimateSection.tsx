@@ -5,7 +5,7 @@ import theaterStage from '@/assets/theater-stage.jpg';
 import localPeople from '@/assets/local-people.jpg';
 import { Thermometer, Wind } from 'lucide-react';
 
-const brandEase = [0.22, 1, 0.36, 1];
+const brandEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const BentoCard = ({
   children,
@@ -61,7 +61,6 @@ const ClimateSection = () => {
 
         {/* Bento Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[80vh]">
-          {/* Large Square - Malecón */}
           <BentoCard className="col-span-2 row-span-2" delay={0}>
             <img src={malecon} alt="El Malecón waterfront at sunset in Cúcuta" className="w-full h-full object-cover min-h-[300px]" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-foreground/70 to-transparent">
@@ -69,7 +68,6 @@ const ClimateSection = () => {
             </div>
           </BentoCard>
 
-          {/* Tall Rectangle - Avenues */}
           <BentoCard className="col-span-1 row-span-2" delay={0.1}>
             <img src={wideAvenues} alt="Wide five-lane avenues of Cúcuta" className="w-full h-full object-cover min-h-[300px]" />
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-foreground/70 to-transparent">
@@ -77,7 +75,6 @@ const ClimateSection = () => {
             </div>
           </BentoCard>
 
-          {/* Small Square - Stage */}
           <BentoCard className="col-span-1 row-span-1" delay={0.2}>
             <img src={theaterStage} alt="The SENA acting stage" className="w-full h-full object-cover min-h-[140px]" />
             <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-foreground/70 to-transparent">
@@ -85,7 +82,6 @@ const ClimateSection = () => {
             </div>
           </BentoCard>
 
-          {/* Small Square - People */}
           <BentoCard className="col-span-1 row-span-1" delay={0.3}>
             <img src={localPeople} alt="Friendly local people of Cúcuta" className="w-full h-full object-cover min-h-[140px]" />
             <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-foreground/70 to-transparent">
